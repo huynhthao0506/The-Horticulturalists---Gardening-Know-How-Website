@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden guide - Events</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body onload= "myFunction()" style="margin: 0;">
+    <div id="loader"></div>
+    <!-- This is header-part -->
+    <div id="myDiv" class="animate-bottom" style="display: none;">
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="./img/logo.png" alt="logo"></a>
+                    <div class="logo-p"><a href="index.html"><p>The Horticulturalists</p></a></div>
+                </div>
+                <!-- <div class="logo-p"><a href="#"><p>The Horticulturalists</p></a></div> -->
+                <div id="nav-bar">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="about.html" class="nav-link">About us</a>
+                        <a href="guide.html" class="nav-link">Greenery Guide</a>
+                        <a href="event.html" class="nav-link">Events</a>
+                        <a href="contact.html" class="nav-link">Contact Us</a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>    
+        </header>
+        <section id="event-header">
+            <h2>2023 Events for Plant Lovers</h2>
+            <p>By The Horticulturalists</p>
+        </section>
+        <!-- Header end -->
+        <section class="container">
+            <div class="event-wrap">
+                <h3>Our live sessions are now open. Seats are limited, be sure to RSVP</h3>
+                <p>I'm a paragraph. Click here to add your own text and edit me.<br>
+                    It’s easy. Just click “Edit Text” or double click me to add your own content<br>
+                    and make changes to the font.
+                </p>
+                <button id="wrap-button">More Info</button>
+            </div>
+            <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')">Show all</button>
+                <button class="btn" onclick="filterSelection('cooking')">Cooking</button>
+                <button class="btn" onclick="filterSelection('lifestyle')">Lifestyle</button>
+                <button class="btn" onclick="filterSelection('health')">Health</button>
+            </div>
+            <!-- Grid layout ---------------------------------------------------------------------->
+            <div class="grid-container" style="clear: both;">
+                <div class="grid-item filterDiv cooking">
+                    <h3>Herbal Infusion: New Ways of Cooking with Herbs</h3>
+                    <img src="./img/event-flexbox01.png" alt="flex-img1">
+                    <p>Robert’s Place, July 1st, 2023</p>
+                    <p style="font-size: 15px; line-height: 1.875em;">I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.                        
+                    </p>
+                    <button class="btn-eventp">RSVP</button>
+                </div>
+                <div class="grid-item filterDiv lifestyle">
+                    <h3>Free DIY Workshop: Macrame Plant Holder</h3>
+                    <img src="./img/event-flexbox02.png" alt="flex-img2">
+                    <p>Downtown Gallery, Aug. 5th, 2023</p>
+                    <p style="font-size: 15px; line-height: 1.875em;">I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.                        
+                    </p>
+                    <button class="btn-eventp">RSVP</button>
+                </div>
+                <div class="grid-item filterDiv lifestyle">
+                    <h3 id="font007">How to Grow Green Living<br>
+                         Walls</h3>
+                    <img src="./img/event-flexbox03.png" alt="flex-img3">
+                    <p>West in Plant Shop. Sep. 7th 2023</p>
+                    <p style="font-size: 15px; line-height: 1.875em;">I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.                        
+                    </p>
+                    <button class="btn-eventp">RSVP</button>
+                </div>             
+                <div class="grid-item filterDiv lifestyle">
+                    <h3>Free DIY Workshop: Sustainable Planter Wall</h3>
+                    <img src="./img/event-flexbox.png" alt="flex-img">
+                    <p>Downtown Gallery, October 23rd, 2023</p>
+                    <p style="font-size: 15px; line-height: 1.875em;">I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.                        
+                    </p>
+                    <button class="btn-eventp">RSVP</button>
+                </div>
+                <div class="grid-item filterDiv health">
+                    <h3>The Advantages of Growing Air Plants and Succulents</h3>
+                    <img src="./img/event-flexbox04.png" alt="flex-img4">
+                    <p>Urban Jungle San Diego. Nov. 15th, 2023</p>
+                    <p style="font-size: 15px; line-height: 1.875em;">I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.                        
+                    </p>
+                    <button class="btn-eventp">RSVP</button>
+                </div>
+                <div class="grid-item filterDiv health">
+                    <h3>Reduce Stress Level by Growing Plants Indoors</h3>
+                    <img src="./img/event-flexbox06.png" alt="flex-img6">
+                    <p>Home & Co. Oct. 3rd, 2023</p>
+                    <p style="font-size: 15px; line-height: 1.875em;">I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.                        
+                    </p>
+                    <button class="btn-eventp">RSVP</button>
+                </div>             
+            </div>
+            <!-- ------------------------------------------------- -->
+            <div id="event-bottom">
+                <h3>This Is How We Roll</h3>
+                <p>Photos from our events</p>
+            </div>   
+        </section>
+    
+        <!-- This is footer-part -->
+        <footer>
+         <div class="social-icon">
+             <ul>
+                 <li><i class="fa-brands fa-youtube"></i></li>
+                 <li><i class="fa-brands fa-instagram"></i></li>
+                 <li><i class="fa-brands fa-facebook-f"></i></li>
+                 <li><i class="fa-brands fa-pinterest-p"></i></li>
+             </ul>
+         </div>
+         <div id="footer-mark">&copy;2023 by The Horticulturalists. Proudly created with <a href="#" style="text-decoration: underline;">Wix.com</a></div>   
+        </footer>
+        <!-- Footer-end-->
+    </div>
+    <script>
+        // Responsive navi-bar
+        const hamburger = document.querySelector(".hamburger");
+       const navBar = document.querySelector("#nav-bar");
+
+       hamburger.addEventListener("click", mobileMenu);
+
+       function mobileMenu() {
+           hamburger.classList.toggle("active");
+           navBar.classList.toggle("active");
+           navBar.style.height = "100%";
+       }
+       const navLink = document.querySelectorAll(".nav-link");
+
+       navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+       function closeMenu() {
+           hamburger.classList.remove("active");
+           navBar.classList.remove("active");
+       }
+       // Loading Animation
+       var myVar;
+
+        function myFunction() {
+        myVar = setTimeout(showPage, 1000);
+        }
+
+        function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+        }
+        // Filter
+        filterSelection('all')
+        function filterSelection (c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c ="";
+                for (i = 0; i < x.length; i++) {
+                    RemoveClass(x[i],"show");
+                    if (x[i].className.indexOf(c) > -1) AddClass(x[i],"show");
+                }
+            }
+        // Show filtered elements
+        function AddClass (element,name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+        // Hide elements that are not selected
+        function RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+        }
+        element.className = arr1.join(" ");
+        }
+        // Add active class to the current control button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+        } 
+   </script>
+</body>
+</html>

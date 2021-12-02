@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden guide - Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script type="text/javascript" src="js/script.js"></script>  -->
+</head>
+<body onload= "myFunction()" style="margin: 0;">
+    <div id="loader"></div>
+    <!-- This is header-part -->
+    <div id="myDiv" class="animate-bottom" style="display: none;">
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="./img/logo.png" alt="logo"></a>
+                    <div class="logo-p"><a href="index.html"><p>The Horticulturalists</p></a></div>
+                </div>
+                <!-- <div class="logo-p"><a href="#"><p>The Horticulturalists</p></a></div> -->
+                <div id="nav-bar">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="about.html" class="nav-link">About us</a>
+                        <a href="guide.html" class="nav-link">Greenery Guide</a>
+                        <a href="event.html" class="nav-link">Events</a>
+                        <a href="contact.html" class="nav-link">Contact Us</a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>            
+        </header>
+        <!-- Header end -->
+        <section class="container">
+            <div id="contact-header">
+                <h2>Contact Us</h2>
+                <p>Don’t Be a Stranger</p>
+            </div>
+            <div id="contact-body">
+                <div id="contact-info">
+                    <div id="contact-left">
+                        <img src="./img/contact-img.png" alt="image">
+                    </div>
+                    <div id="contact-right">
+                        <div id="info-wrap">
+                            <p>500 Terry Francois Street<br>
+                                San Francisco, CA 94158<br>
+                                123-456-7890<br>
+                            <a href="mailto:info@mysite.com">info@mysite.com</a></p>
+                        </div> 
+                        <div id="info-form">
+                            <form action="#">
+                                <div id="infoform-inline">
+                                    <div id="info-name">
+                                        <label for="name"></label>
+                                        <input type="text" name="name" id="name" placeholder="Name">
+                                    </div>
+                                    <div id="info-email">
+                                        <label for="email"></label>
+                                        <input type="email" name="email" id="email" placeholder="Email Address" required>
+                                    </div>
+                                </div>
+                               <div id="infoform-part">
+                                    <div id="info-subject">
+                                        <label for="subject"></label>
+                                        <input type="text" name="subject" id="subject" placeholder="Subject">
+                                    </div>
+                                    <div id="info-message">
+                                        <textarea name="message" id="message" cols="30" rows="4" placeholder="Type your message here..."></textarea>
+                                    </div>
+                                    <button id="info-btn" type="submit" onclick="errorMess()">Submit</button>
+                               </div>
+                            </form>
+                        </div>               
+                    </div>
+                </div>
+                <div id="info-map">
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=500%20Terry%20A%20Francois%20Blvd,%20San%20Francisco,%20CA%2094158%20%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB%E5%90%88%E8%A1%86%E5%9B%BD&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:100%;}</style><a href="https://www.embedgooglemap.net">embedded map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style>
+                        </div>
+                        </div>
+                </div>
+                <div id="info-wrap-mobile">
+                    <p>500 Terry Francois Street<br>
+                        San Francisco, CA 94158<br>
+                        123-456-7890<br>
+                    <a href="mailto:info@mysite.com">info@mysite.com</a></p>
+                </div>
+            </div>
+        </section>
+    
+    
+        <!-- This is footer-part -->
+        <footer>
+         <div class="social-icon">
+             <ul>
+                 <li><i class="fa-brands fa-youtube"></i></li>
+                 <li><i class="fa-brands fa-instagram"></i></li>
+                 <li><i class="fa-brands fa-facebook-f"></i></li>
+                 <li><i class="fa-brands fa-pinterest-p"></i></li>
+             </ul>
+         </div>
+         <div id="footer-mark">&copy;2023 by The Horticulturalists. Proudly created with <a href="#" style="text-decoration: underline;">Wix.com</a></div>   
+        </footer>
+        <!-- Footer-end-->
+    </div>
+    <script>
+        // Responsive navi-bar
+        const hamburger = document.querySelector(".hamburger");
+       const navBar = document.querySelector("#nav-bar");
+
+       hamburger.addEventListener("click", mobileMenu);
+
+       function mobileMenu() {
+           hamburger.classList.toggle("active");
+           navBar.classList.toggle("active");
+           navBar.style.height = "100%";
+       }
+       const navLink = document.querySelectorAll(".nav-link");
+
+       navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+       function closeMenu() {
+           hamburger.classList.remove("active");
+           navBar.classList.remove("active");
+       }
+       // Loading Animation
+       var myVar;
+
+        function myFunction() {
+        myVar = setTimeout(showPage, 1000);
+        }
+
+        function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+        }
+
+        //Form validation
+        function errorMess() {
+            let y = document.getElementById("email").value;
+            let redAlert;
+            if (y=="") {
+                redAlert= document.getElementById("email").style.border = "solid 1px #ff4040";
+                redAlert= document.getElementById("email").style.backgroundColor = "#f3dfdf";
+            } 
+        }
+   </script>
+</body>
+</html>

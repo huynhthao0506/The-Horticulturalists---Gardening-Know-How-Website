@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden guide - About</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script type="text/javascript" src="js/script.js"></script>  -->
+</head>
+<body onload= "myFunction()" style="margin: 0;">
+    <div id="loader"></div>
+    <!-- This is header-part -->
+    <div id="myDiv" class="animate-bottom" style="display: none;">
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="./img/logo.png" alt="logo"></a>
+                    <div class="logo-p"><a href="index.html"><p>The Horticulturalists</p></a></div>
+                </div>
+                <!-- <div class="logo-p"><a href="#"><p>The Horticulturalists</p></a></div> -->
+                <div id="nav-bar">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="about.html" class="nav-link">About us</a>
+                        <a href="guide.html" class="nav-link">Greenery Guide</a>
+                        <a href="event.html" class="nav-link">Events</a>
+                        <a href="contact.html" class="nav-link">Contact Us</a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>         
+        </header>
+        <!-- Header end -->
+        <section class="about-title">
+            <h2>We Are the Horticulturalists</h2>
+            <h3>We believe that plants have a central role in our modern lifestyle, wellbeing, transforming urban spaces into a beautiful, healthy and sustainable environments.</h3>
+            <p>I'm a paragraph. Click here to add your own text and edit me.<br>
+                It’s easy. Just click “Edit Text” or double click me to add your own content and<br>
+                make changes to the font. I’m a great place for you to tell a story and<br>
+                let your users know a little more about you.</p>
+        </section>
+        <section class="info">
+            <h2>Get to Know Us</h2>
+            <div class="flex-info">
+                <div class="row">
+                    <div class="box-info">
+                        <img src="./img/about-1.png" alt="about01">
+                        <h4>Jammie Landau</h4>
+                        <p class="font01">Horticulture Ninja</p>
+                        <p class="font02">
+                            <a href="mailto:mysite@wix.com">info@mysite.com</a>
+                        </p>
+                        <p class="font03">
+                            <a href="http://instagram.com" target="_blank">instagram</a>
+                            |
+                            <a href="http://facebook.com" target="_blank">Facebook</a>
+                        </p>
+                    </div>
+                    <div class="box-info">
+                        <img src="./img/about-3.png" alt="about03">
+                        <h4>Emily South</h4>
+                        <p class="font01">Horticulture Director</p>
+                        <p class="font02">
+                            <a href="mailto:mysite@wix.com">info@mysite.com</a>
+                        </p>
+                        <p class="font03">
+                            <a href="http://instagram.com" target="_blank">instagram</a>
+                            |
+                            <a href="http://facebook.com" target="_blank">Facebook</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="box-info">
+                        <img src="./img/about-2.png" alt="about02">
+                        <h4>Dina Banker</h4>
+                        <p class="font01">Horticulture Designer</p>
+                        <p class="font02">
+                            <a href="mailto:mysite@wix.com">info@mysite.com</a>
+                        </p>
+                        <p class="font03">
+                            <a href="http://instagram.com" target="_blank">instagram</a>
+                            |
+                            <a href="http://facebook.com" target="_blank">Facebook</a>
+                        </p>
+                    </div>
+                    <div class="box-info">
+                        <img src="./img/about-4.png" alt="about04">
+                        <h4>Daniel Hans</h4>
+                        <p class="font01">Horticulture Expert</p>
+                        <p class="font02">
+                            <a href="mailto:mysite@wix.com">info@mysite.com</a>
+                        </p>
+                        <p class="font03">
+                            <a href="http://instagram.com" target="_blank">instagram</a>
+                            |
+                            <a href="http://facebook.com" target="_blank">Facebook</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- This is footer-part -->
+        <footer>
+         <div class="social-icon">
+             <ul>
+                 <li><i class="fa-brands fa-youtube"></i></li>
+                 <li><i class="fa-brands fa-instagram"></i></li>
+                 <li><i class="fa-brands fa-facebook-f"></i></li>
+                 <li><i class="fa-brands fa-pinterest-p"></i></li>
+             </ul>
+         </div>
+         <div id="footer-mark">&copy;2023 by The Horticulturalists. Proudly created with <a href="#" style="text-decoration: underline;">Wix.com</a></div>   
+        </footer>
+        <!-- Footer-end-->
+    </div>
+    <script>
+         // Responsive navi-bar
+         const hamburger = document.querySelector(".hamburger");
+        const navBar = document.querySelector("#nav-bar");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navBar.classList.toggle("active");
+            navBar.style.height = "100%";
+        }
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navBar.classList.remove("active");
+        }
+        // Loading Animation
+        var myVar;
+
+        function myFunction() {
+        myVar = setTimeout(showPage, 1000);
+        }
+
+        function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden guide - Greenery Guide</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script type="text/javascript" src="js/script.js"></script>  -->
+</head>
+<body onload= "myFunction()" style="margin: 0;">
+    <div id="loader"></div>
+    <!-- This is header-part -->
+    <div id="myDiv" class="animate-bottom" style="display: none;">
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="./img/logo.png" alt="logo"></a>
+                    <div class="logo-p"><a href="index.html"><p>The Horticulturalists</p></a></div>
+                </div>
+                <!-- <div class="logo-p"><a href="#"><p>The Horticulturalists</p></a></div> -->
+                <div id="nav-bar">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="about.html" class="nav-link">About us</a>
+                        <a href="guide.html" class="nav-link">Greenery Guide</a>
+                        <a href="event.html" class="nav-link">Events</a>
+                        <a href="contact.html" class="nav-link">Contact Us</a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>    
+        </header>
+        <!-- Header end -->
+        <section class="guide-title">
+            <h2>Bringing Nature<br>
+                into Your Urban Space</h2>
+            <h3>Watch Our Greenery Guide & Learn About Horticulture</h3>
+            <p>I'm a paragraph. Click here to add your own text and edit me.<br>
+                It’s easy. Just click “Edit Text” or double click me to add your own content and<br>
+                make changes to the font. I’m a great place for you to tell a story and<br>
+                let your users know a little more about you.</p>
+        </section>
+        <div class="container">
+            <div class="video">
+                <img src="./img/video01.jpg" alt="indoor veggie garden">
+                <h3 class="video-title">Indoor Vegggie Garden</h3>
+                <button class="play-btn"><i class="far fa-play-circle"></i></button>
+            </div>
+            <div class="video">
+                <img src="./img/video02.jpg" alt="Herbs Go Mainstream">
+                <h3 class="video-title">Herbs Go Mainstream</h3>
+                <button class="play-btn"><i class="far fa-play-circle"></i></button>
+            </div>
+            <div class="video">
+                <img src="./img/video03.jpeg" alt="Hydroponic Method">
+                <h3 class="video-title">Hydroponic Method</h3>
+                <button class="play-btn"><i class="far fa-play-circle"></i></button>
+            </div><div class="video">
+                <img src="./img/video04.jpeg" alt="Vetical Garden">
+                <h3 class="video-title">Vetical Garden</h3>
+                <button class="play-btn"><i class="far fa-play-circle"></i></button>
+            </div>
+            <div class="video">
+                <img src="./img/video05.jpeg" alt="Plant Stands & Tables">
+                <h3 class="video-title">Plant Stands & Tables</h3>
+                <button class="play-btn"><i class="far fa-play-circle"></i></button>
+            </div>
+        </div>
+        <!-- This is footer-part -->
+        <footer>
+         <div class="social-icon">
+             <ul>
+                 <li><i class="fa-brands fa-youtube"></i></li>
+                 <li><i class="fa-brands fa-instagram"></i></li>
+                 <li><i class="fa-brands fa-facebook-f"></i></li>
+                 <li><i class="fa-brands fa-pinterest-p"></i></li>
+             </ul>
+         </div>
+         <div id="footer-mark">&copy;2023 by The Horticulturalists. Proudly created with <a href="#" style="text-decoration: underline;">Wix.com</a></div>   
+        </footer>
+        <!-- Footer-end-->
+    </div>
+    <script>
+        // Responsive navi-bar
+        const hamburger = document.querySelector(".hamburger");
+       const navBar = document.querySelector("#nav-bar");
+
+       hamburger.addEventListener("click", mobileMenu);
+
+       function mobileMenu() {
+           hamburger.classList.toggle("active");
+           navBar.classList.toggle("active");
+           navBar.style.height = "100%";
+       }
+       const navLink = document.querySelectorAll(".nav-link");
+
+       navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+       function closeMenu() {
+           hamburger.classList.remove("active");
+           navBar.classList.remove("active");
+       }
+       // Loading Animation
+       var myVar;
+
+        function myFunction() {
+        myVar = setTimeout(showPage, 1000);
+        }
+
+        function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+        }
+   </script>
+</body>
+</html>

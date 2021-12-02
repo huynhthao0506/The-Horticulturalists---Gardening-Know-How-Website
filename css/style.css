@@ -1,0 +1,1713 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #20303c;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: #f9fafa;
+}
+
+a {
+    text-decoration: none;
+}
+/* ----page loading animation------- */
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    margin: -76px 0 0 -76px;
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #73bbd1;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+}
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+#myDiv {
+    display: none;
+}  
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait */
+
+@media only screen
+
+and (min-device-width: 375px)
+
+and (max-device-width: 667px)
+
+and (-webkit-min-device-pixel-ratio: 2)
+
+and (orientation: portrait) {
+    #loader {
+        top: 50%;
+        left: 55%;
+        transform: translate(-50%, -55%);
+    }
+}
+/*------------- Header--------------------- */
+nav {
+    width: 100%;
+    margin-bottom: 1.5%;
+    padding: 1.5% 5%;
+    position: fixed;
+    top: 0;
+    overflow: auto;
+    z-index: 1;
+    background-color: #f9fafa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav-bar.active {
+    border: none;
+}
+.logo {
+    display: flex;
+}
+
+.logo-p p {
+    color: #20303c;
+    letter-spacing: 0.2rem;
+    margin-left: 0;
+}
+
+.logo img {
+    width: 100%;
+}
+
+#nav-bar {
+    display: flex;
+    align-items: center;
+}
+#nav-bar a {
+    font-size: 1rem;
+    line-height: 0.5rem;
+    text-align: right;
+    padding: 0 1rem;
+}
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* -----section header part----------- */
+#header-main {
+    margin: 0 5%;
+}
+#header-img1 img {
+    position: relative;
+    width: 100%;
+    filter: brightness(50%);
+}
+#header-title {
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    transform: translate(5%, -30%);
+}
+#header-title h1, p {
+    color: #f1f1f1;
+}
+#header-title h1 {
+    text-align: center;
+    font-size: 5.5rem;
+    line-height: 1.25em;
+    font-weight: 500;
+}
+#header-title p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    line-height: 1.67em;
+    letter-spacing: 0.1em;
+    padding-bottom: 10%;
+}
+#btn-primary {
+    border: none;
+    background-color: #f9fafa;
+    margin: 2% auto;
+    padding: 10px 15px;
+    text-align: center;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: relative;
+    left: 55%;
+    bottom: 30%;
+    transform: translate(-55%, -30%);
+}
+#btn-primary a {
+    font-size: 1rem;
+}
+#btn-primary:hover {
+    background-color: #f9fafa;
+    opacity: 0.5;
+}
+
+/*------- This is article part --------*/
+.article {
+    width: 60%;
+    margin: 150px auto;
+}
+.article h2 {
+    color: #000;
+    font-size: 3rem;
+    line-height: 1.35em;
+    text-align: center;
+    font-weight: lighter;
+}
+.article p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.75em;
+    color: #000;
+    letter-spacing: 1.5px;
+    margin: 35px 0 5%;
+}
+.flex-part {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.item {
+    margin-bottom: 18%;
+    padding-right: 25px;
+}
+.item h3 {
+    text-align: left;
+    font-size: 1.75rem;
+    line-height: 1.41em;
+    font-weight: lighter;
+    padding: 35px 0;
+}
+.item p {
+    width: 85%;
+    margin: 0;
+    text-align: left;
+    font-size: 0.75rem;
+    line-height: 1.875em;
+}
+.btn-item {
+    background-color: #73bbd1;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 40px;
+    transition-duration: 0.4s;
+}
+.btn-item:hover {
+    background-color: #73bbd1;
+    opacity: 0.5;
+}
+.btn-item a {
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+/*--------------- This is quote part------------- */
+#quote {
+    background-image: url(../img/main-bg.png);
+    background-size: cover;
+    margin: 0 10%;
+}
+#quote h2 {
+    width: 60%;
+    font-size: 3rem;
+    line-height: 1.35em;
+    color: #fff;
+    font-weight: lighter;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 25px;
+    text-align: left;
+}
+#quote p {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.875em;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    margin-left: 0;
+}
+
+/* -------This is slideshow part----- */
+h2 {
+    color: #000;
+    font-size: 3rem;
+    line-height: 1.35em;
+    text-align: center;
+    font-weight: lighter;
+    margin-top: 6%;
+}
+.slide-container {
+    height: 800px;
+    position: relative;
+}
+.mySlides {
+    display: none;
+    position: absolute;
+    top: 30%;
+    margin-left: 25%;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+}
+
+.mySlides img {
+    float: left;
+    margin-right: 5%;
+}
+.slide-main {
+    width: 70%;
+}
+.slide-main h3 {
+    padding: 30px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.41em;
+    font-weight: lighter;
+    color: #000;
+}
+.slide-main p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 2em;
+    color: #20303c;
+    font-weight: lighter;
+    padding: 15px;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 100px;
+    color: #20303c;
+    font-weight: lighter;
+    font-size: 40px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    color: #20303c;
+    opacity: 0.5;
+  }
+  
+  /* The dot/bullet/indicator container */
+  .dot-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    margin: 0 5px;
+    background-color: #20303c;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  /* Add a background color to the active dot/circle */
+  .active {
+    background-color: #f9fafa;
+    border: solid 2px #20303c;
+  }
+
+/* ------This is footer-main part ---------   */
+#footer-main {
+    padding: 8% 5%;
+    background-color: #f1f1f1;
+    height: 750px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+#text {
+    width: 38%;
+    margin-left: 20%;  
+}
+#text h2, p {
+    color: #000;
+    text-align: left;
+}
+#text h2 {
+    width: 80%;
+    font-size: 3rem;
+    line-height: 1.35em;
+}
+#text p {
+    width: 70%;
+    font-size: 1rem;
+    line-height: 2.3em;
+    padding: 30px 0;
+}
+
+/* ----Form part----------- */
+.form-inline {
+    width: 70%;
+    margin: 5% 25%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.form-inline label {
+    width: 10%;
+    margin: 5px 15px 5px 0;
+}
+.form-inline label i {
+    font-size: 1rem;
+    color: rgba(0,0,0,1);
+    padding-left: 10px;
+}
+.form-inline input {
+    width: 85%;
+    border: none;
+    background-color: inherit;
+    font-size: 1rem;
+    padding: 8px 8px 8px 0;
+}
+.form-inline input:focus {
+    outline-color: #73bbd1af;
+}
+.name-part, .email-part {
+    text-align: left;
+    width: 30%;
+    margin-left: 15px;
+    border-bottom: solid 1px #000;
+}
+.sub-btn {
+   background-color: rgba(0,0,0,1);
+   border: solid 1px rgba(0,0,0,1);
+   color: rgba(255,255,255,1);
+   font-size: 1rem;
+   line-height: 1.875em;
+   padding: 9px 24px;
+   margin-left: 15px;
+   cursor: pointer;
+}
+#message-footer {
+   text-align: center;
+   margin-left: 0;
+   font-size: 0.75rem;
+   color: rgba(115,187,209,1);
+}
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+/* Portrait */
+
+@media only screen
+
+and (min-device-width: 375px)
+
+and (max-device-width: 667px)
+
+and (-webkit-min-device-pixel-ratio: 2)
+
+and (orientation: portrait) {
+    nav {
+        width: 100%;
+        padding: 1.5% 0 1.5% 1%;
+    }
+    #nav-bar {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        bottom: 100%;
+        flex-direction: column;
+        background-color: #fff;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 60px 0;
+    }
+    #nav-bar.active {
+        border: none;
+        bottom: 0;
+    }
+    #nav-bar a {
+        padding: 4% 0;
+        font-size: 1rem;
+    }
+    #nav-bar a:first-child {
+        color: #73bbd1;
+    }
+    .logo {
+        padding-top: 20px;
+    }
+    .logo-p p {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .hamburger {
+        padding-right: 5%;
+        display: block;
+        cursor: pointer;
+    }
+
+    #header-main {
+        margin: 70px 0 0 0;
+    }
+    #header-img1 img {
+        width: 100%;
+        height: 18rem;
+        object-fit: cover;
+        object-position: 100% 0%;
+        filter: brightness(80%);
+    }
+    #header-title {
+        position: absolute;
+        top: 2%;
+        left: 19%;
+        transform: translate(-2%, -19%);
+    }
+    #header-title h1 {
+        text-align: center;
+        font-size: 2rem;
+        line-height: 1.25em;
+        font-weight: 500;
+    }
+    #header-title p {
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: lighter;
+        line-height: 1.67em;
+        letter-spacing: 0.5px;
+        padding: 10px 20px;
+        margin-left: 0;
+    }
+    #btn-primary {
+        padding: 4px 10px;
+    }
+    #btn-primary a {
+        font-size: 0.7rem;
+    }
+    .article {
+        width: 100%;
+        margin: 0;
+    }
+    .article h2 {
+        font-size: 1.75rem;
+        margin-top: 25px;
+    }
+    .article p {
+        font-size: 0.8rem;
+        margin: 15px;
+    }
+    .flex-part {
+        display: block;
+    }
+    .row {
+        margin: 0;
+        padding: 0;
+    }
+    .item h3, button {
+        margin-left: 2%;
+    }
+    
+    .item img {
+       object-fit: cover;
+       object-position: 50% 50%;
+    }
+    .item h3 {
+       font-size: 1.2rem;
+       padding-bottom: 10px; 
+    }
+    .item p {
+        width: 100%;
+        font-size: 0.9rem;
+        margin-left: 2%;
+        letter-spacing: normal;
+    }
+    .btn-item {
+        margin-top: 15px;
+    }
+    #quote {
+        margin: 0;
+        background-size: cover;
+    }
+    #quote h2 {
+        width: 100%;
+        font-size: 24px;
+        padding: 50px 0 25px 60px;
+    }
+    #quote p {
+        font-size: 14px;
+        padding-left: 60px;
+    }
+    .slide-container {
+        height: 700px;
+    }
+    .slide-main {
+        width: 100%;
+    }
+    .mySlides {
+        margin-left: 0;
+        top: 7%;
+    }
+    h2 {
+        font-size: 1.75rem;
+        margin-left: 2%;
+    }
+    .mySlides img {
+        width: 100%;
+    }
+    .prev, .next {
+        display: none;
+    }
+    .slide-main h3 {
+        padding: 10px 0;
+        font-size: 1.25rem;
+    }
+    .slide-main p {
+        font-size: 0.8rem;
+        padding: 10px;
+        margin-left: 2%;
+    }
+    
+    #footer-main {
+        padding: 5% 2%;
+        display: block;
+    }
+    #text {
+        width: 100%;
+        margin-left: 0;
+    }
+    #text h2 {
+        font-size: 1.5rem;
+        margin-left: 2%;
+        margin-top: 40px;
+    }
+    #text p {
+        width: 100%;
+        font-size: 0.8rem;
+        margin-left: 2%;
+    }
+    #footer-main img {
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+    .form-inline {
+        width: 100%;
+        display: block;
+        margin: 5% 2%;
+    }
+    .form-inline label i {
+        padding-left: 0;
+    }
+    .name-part, .email-part {
+        width: 80%;
+        padding-top: 20px;
+    }
+    .sub-btn {
+        width: 80%;
+        margin-top: 25px;
+    }
+    .social-icon {
+        margin-top: 10%;
+    }
+    #footer-mark {
+        width: 90%;
+        font-size: 0.4rem;
+        margin-left: 2%;
+        margin-bottom: 5%;
+    }
+
+    #footer-mark a {
+        
+        font-size: 12px;
+    }
+    
+
+}
+
+
+@media only screen
+
+and (min-device-width: 668px)
+
+and (max-device-width: 1023px) {
+    nav {
+        padding: 1.5% 2%; 
+    }
+    .logo {
+        padding-top: 2%;
+    }
+    .logo-p p {
+        letter-spacing: normal;
+    }
+    #header-main {
+        margin: 70px 0 0 0;
+    }
+    #header-title {
+        position: absolute;
+        top: 3%;
+        left: 35%;
+        transform: translate(-3%, -35%);
+    }
+    #header-title h1 {
+        font-size: 2.5rem;
+    }
+    #header-title p {
+        margin-left: 0;
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+    #btn-primary a {
+        font-size: 0.75rem;
+    }
+    #btn-primary {
+        padding: 8px 10px;
+    }
+    .article {
+        margin: 0 auto;
+        width: 90%;
+    }
+    .article h2 {
+        font-size: 2rem;
+    }
+    .article p {
+        font-size: 1.25rem;
+    }
+    .item img {
+        width: 100%;
+    }
+    .item h3 {
+        font-size: 1.5rem;
+    }
+    .item p {
+        font-size: 0.8rem;
+        letter-spacing: normal;
+    }
+    .btn-item a {
+        font-size: 0.9rem;
+    }
+    #quote {
+        margin: 0;
+    }
+    #quote h2 {
+        width: 100%;
+        font-size: 2rem;
+        padding-left: 80px;
+        padding-top: 100px;
+    }
+    #quote p {
+        padding-left: 80px;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .slide-container {
+        height: 850px;
+    }
+    .mySlides {
+        top: 10%;
+    }
+    .mySlides img {
+        padding-bottom: 20px;
+        width: 70%;
+    }
+    .prev, .next {
+        display: block;
+        top: 26%;
+    }
+    .slide-main h3 {
+        padding: 20px 0;
+        font-size: 1rem;
+    }
+    .slide-main p {
+        text-align: center;
+        font-size: 0.8rem;
+        padding: 10px;
+        margin-left: 0;
+    }
+    #text {
+        margin-left: 0;
+        width: 100%;
+    }
+    #text h2 {
+        width: 100%;
+        font-size: 2rem;
+        margin-left: 5%;
+        margin-top: 100px;
+    }
+    #text h2, p {
+        margin-left: 5%;
+    }
+    #text p {
+        font-size: 0.8rem;
+        padding: 0;
+    }
+    .form-inline {
+        width: 80%;
+        margin: 5% 20%;
+    }
+    .form-inline input {
+        font-size: 0.8rem;
+    }
+    .form-inline label {
+        margin: 5px 0 5px 0;
+    }
+    .form-inline label i {
+        font-size: 0.8rem;
+        padding-left: 0;
+    }
+    .sub-btn {
+        font-size: 0.75rem;
+    }
+}
+@media only screen
+
+and (min-device-width: 1023px)
+
+and (max-device-width: 1680px) {
+    #header-title {
+        top: 3%;
+        left: 28%;
+        transform: translate(3%, -28%);
+    }
+    #header-title h1 {
+        font-size: 65px;
+    }
+    #quote h2 {
+        width: 53%;
+        padding-top: 100px;
+    }
+    .slide-main h3 {
+        padding: 30px 0;
+    }
+    .slide-main p{
+        font-size: 15px;
+        padding: 10px 30px;
+    }
+    .form-inline label i {
+        padding-left: 0;
+    }
+}
+/* -----------index.html end -------------*/
+
+/* ------------about.html----------------- */
+/* -------------------------------------------- */
+/* This is about-title part */
+.about-title {
+    text-align: center;
+    margin-bottom: 5%;
+}
+.about-title h2 {
+    font-size: 3rem;
+    line-height: 1.34em;
+    margin-bottom: 50px;
+}
+.about-title h3 {
+    width: 40%;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.75em;
+    font-weight: lighter;
+}
+.about-title p {
+    text-align: center;
+    text-indent: 1rem;
+    margin: 0 auto;
+    padding: 3% 0;
+    width: 40%;
+    font-size: 0.8rem;
+    line-height: 1.79em;
+}
+.info {
+    background-color: #f1f1f1;
+}
+.info h2 {
+    padding: 5% 0;
+}
+.row {
+    margin: 50px 0;
+    padding: 20px 0;
+}
+.flex-info {
+    display: flex;
+    flex-wrap: nowrap;
+    margin:0 20%;
+}
+.box-info {
+    margin-bottom: 18%;
+    padding:0 30px;
+}
+.box-info img {
+    width: 100%;
+}
+.box-info h4 {
+    font-size: 1.4rem;
+    font-weight: lighter;
+    line-height: 1.41em;
+    margin: 40px 0;
+    color: #000;
+}
+.font01 {
+    font-size: 1rem;
+    font-weight: lighter;
+    line-height: 1.75em;
+    padding-bottom: 40px;
+}
+.font02, .font03 {
+    font-size: 0.75rem;
+    line-height: 1.875em;
+}
+.box-info p {
+    margin-left: 0;
+}
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait */
+
+@media only screen
+
+and (min-device-width: 375px)
+
+and (max-device-width: 667px)
+
+and (-webkit-min-device-pixel-ratio: 2)
+
+and (orientation: portrait) {
+    .about-title {
+        margin-top: 25%;
+    }
+    .about-title h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .about-title h3 {
+       width: 100%;
+       font-size: 1rem;
+       text-align: center; 
+    }
+    .about-title p {
+        width: 100%;
+        padding: 2% 1%;
+        font-size: 0.6rem;
+        text-align: center;
+    }
+    .info h2 {
+        text-align: center;
+        padding-top: 10%;
+        margin-top: 0;
+    }
+    .flex-info {
+        display: block;
+        margin: 0;
+    }
+    .box-info, .box-info p {
+        text-align: center;
+    }
+    .box-info img {
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }    
+}
+/* ipad */
+@media only screen
+
+and (min-device-width: 668px)
+
+and (max-device-width: 1023px) {
+    .about-title h2 {
+        margin-top: 10%;
+        font-size: 3rem;
+    }
+    .about-title h3 {
+        width: 60%;
+    }
+    .about-title p {
+        width: 60%;
+    }
+    .flex-info {
+        margin: 0;
+    }
+    .box-info h4 {
+        margin: 0;
+    }
+    .font01 {
+        padding-bottom: 0;
+    }    
+}
+@media only screen
+
+and (min-device-width: 1023px)
+ 
+and (max-device-width: 1680px)
+{
+    .about-title p {
+        width: 40%;
+    }
+}
+/* ---------about.html end----------------- */
+
+/* ---------guide.html------------------------- */
+.guide-title {
+    text-align: center;
+    margin-bottom: 10%;    
+}
+.guide-title h2 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    font-size: 40px;
+    line-height: 1.35em;
+}
+.guide-title h3 {
+    font-size: 18px;
+    font-weight: lighter;
+    line-height: 1.75em;
+    letter-spacing: 1px;
+    color: #000;
+
+}
+.guide-title p {
+    text-align: center;
+    margin-left: 0;
+    padding: 50px 0;
+    font-size: 15px;
+    line-height: 1.875em;
+    letter-spacing: normal;
+}
+.container .video {
+    margin: 5% auto;
+    width: 50%;
+    position: relative;
+}
+.video-title {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-45%,-50%);
+}
+.video img { 
+    width: 100%;
+    filter: brightness(65%);
+}
+.play-btn {
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-55%,-50%);
+    background-color: transparent;
+}
+.play-btn i {
+    color: #fff;
+    font-size: 56px;
+}
+.video-title {
+    color: #fff;
+    font-size: 30px;
+    font-weight: lighter;
+    padding-bottom: 40px;
+}
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait */
+
+@media only screen
+
+and (min-device-width: 375px)
+
+and (max-device-width: 667px)
+
+and (-webkit-min-device-pixel-ratio: 2)
+
+and (orientation: portrait) {
+    .guide-title {
+        margin-left: 2%;
+        text-align: left;
+    }
+    .guide-title h2 {
+        width: 100%;
+        font-size: 2rem;
+        margin-bottom: 10px;
+        margin-top: 20%;
+    }
+    .guide-title h3 {
+        font-size: 1rem; 
+        text-align: center;   
+    }
+    .guide-title p {
+        font-size: 0.8rem;
+        padding: 10px 0;
+    }
+    .container .video {
+        width: 100%;
+        background-color: #000;
+        padding: 10% 0;
+        margin: 0;
+    }
+    .video img {
+        object-fit: cover;
+        object-position: 50% 50%;
+
+    }
+    .video-title {
+        font-size: 1rem;
+        text-decoration: underline;
+    }
+    .play-btn i {
+        font-size: 30px;
+    }
+   
+}
+/* ipad */
+@media only screen
+
+and (min-device-width: 668px)
+
+and (max-device-width: 1023px) {
+    .guide-title h2 {
+        margin-top: 20%;
+    }
+    .container .video {
+        width: 80%;
+    }
+    .video-title {
+        font-size: 1.5rem;
+    }    
+}
+@media only screen
+
+and (min-device-width: 1023px)
+ 
+and (max-device-width: 1680px) {
+    .video-title {
+        font-size: 30px;
+    }
+    .play-btn i {
+        font-size: 50px;
+    }
+}
+/* ---------guide.html end------------------------- */
+
+/* ------event.html---------------------------------- */
+#event-header h2 {
+    font-size: 3rem;
+    line-height: 1.35em;
+    margin-top: 10%;
+}
+#event-header p {
+    font-size: 1rem;
+    line-height: 1.875em;
+    font-weight: normal;
+    text-align: center;
+    margin:2% 0 4% 0;
+}
+.event-wrap {
+    background-image: url(../img/guide-bg01.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    height: 438px;
+    position: relative;
+}
+.event-wrap h3 {
+    width: 58%;
+    margin: 0 auto;
+    padding-top: 5%;
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.375em;
+    color: #fff;
+    text-align: center;
+}
+.event-wrap p {
+    margin: 0 auto;
+    padding: 20px;
+    width: 40%;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.79em;
+    color: #fff;
+}
+#wrap-button {
+    background-color: #73bbd1;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    transition-duration: 0.4s;
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%,-20%);
+    cursor: pointer;
+    font-size: 14px;
+}
+#wrap-button:hover {
+    background-color: #73bbd1;
+    opacity: 0.5;
+}
+.grid-container {
+    margin-left: 6%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10%;
+    grid-column-gap: 5%;
+}
+
+.grid-container h3 {
+    font-size: 1.5rem;
+    line-height: 1.41em;
+    font-weight: normal;
+    color: #000;
+    padding-bottom: 25%;
+}
+.grid-container img {
+    width: 80%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+.grid-container p {
+    margin-top: 15%;
+    margin-left: 0;
+    font-size: 1rem;
+    line-height: 1.75em;
+}
+.btn-eventp {
+    background-color: #73bbd1;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    transition-duration: 0.4s;
+    font-size: 0.8rem;
+    margin: 15% 0;
+    cursor: pointer;
+}
+.btn-eventp:hover {
+    background-color: #73bbd1;
+    opacity: 0.5;
+}
+#event-bottom {
+    background-color: #f1f1f1;
+    height: 340px;
+}
+#event-bottom h3 {
+    padding-top: 4%;
+    font-size: 2rem;
+    line-height: 1.375em;
+    text-align: center;
+    font-weight: normal;
+    color: #000;
+}
+#event-bottom p {
+    margin-left: 0;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.875em;
+    padding: 2% 0;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2021-11-16 9:21:25
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-up-ver-bottom
+ * ----------------------------------------
+ */
+ @-webkit-keyframes scale-up-ver-bottom {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+  }
+  @keyframes scale-up-ver-bottom {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+  }
+  
+#myBtnContainer{
+    float: right;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.filterDiv {
+    display: none;
+}
+.show {
+    animation: scale-up-ver-bottom;
+    animation-duration: 1s;
+    display: block;
+}
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 12px 16px;
+    background-color: #73bbd1;
+    color: #fff;
+    opacity: 0.5;
+}
+.btn:hover {
+    background-color: #73bbd1;
+    opacity: 1;
+    
+}
+.btn.active {
+    background-color: #73bbd1;
+    opacity: 1;
+}
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait */
+
+@media only screen
+
+and (min-device-width: 375px)
+
+and (max-device-width: 667px)
+
+and (-webkit-min-device-pixel-ratio: 2)
+
+and (orientation: portrait) {
+    #event-header {
+        margin: 45% 0;
+    }
+    #event-header h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 30%;
+        padding: 0 20%;
+    }
+    .event-wrap h3 {
+        font-size: 1.5rem;
+        padding-top: 20%;
+    }
+    .event-wrap p {
+        font-size: 0.8rem;
+        width: 80%;
+    }
+    #wrap-button {
+        bottom: 10%;
+        font-size: 0.7rem;
+    }
+   .grid-container {
+       margin: 0 auto;
+       display: block;
+   }
+   .grid-container img {
+       width: 100%;
+   }
+   #event-bottom {
+       padding: 40px 0;
+       height: auto;
+   }
+   #event-bottom h3 {
+       font-size: 2rem;
+   }
+   #event-bottom p {
+       font-size: 1rem;
+   }
+   #myBtnContainer {
+       float: none;
+        margin-right: 2px;
+        padding: 3px;
+   }
+}
+/* ipad */
+@media only screen
+
+and (min-device-width: 668px)
+
+and (max-device-width: 1023px) {
+    #event-header h2 {
+        margin-top: 15%;
+        font-size: 2rem;
+    }
+    .event-wrap {
+        height: 380px;
+        font-size: 1.5rem;
+    }
+    .event-wrap p {
+        width: 70%;
+    }
+    #wrap-button {
+        bottom: 10%;
+        font-size: 0.75rem;
+    }
+    .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 0;
+    }
+    .grid-item {
+        text-align: center;
+       flex: 40%;
+    }
+    .grid-container h3 {
+        font-size: 20px;
+        padding-bottom: 10%;
+    }
+    .grid-container p {
+        margin-top: 5%;
+        text-align: center;
+        font-size: 15px;
+    }
+    #font008 {
+        padding-top: 0;
+    }
+    .btn-eventp {
+        font-size: 12px;
+        margin: 10% 0;
+    }
+    /* #font007 {
+        padding-bottom: 18%;
+    } */
+    #event-bottom {
+        height: 200px;
+    }
+    #event-bottom h3 {
+        padding-top: 6%;
+        font-size: 2rem;
+    }
+}
+@media only screen
+
+and (min-device-width: 1023px)
+ 
+and (max-device-width: 1680px) {
+    .event-wrap h3 {
+        width: 60%;
+    }
+    .event-wrap p {
+        width: 40%;
+    }
+    .grid-container {
+        width: 100%;
+        padding: 10%;
+        grid-column-gap: 5%;
+    }
+    #event-bottom {
+        height: 200px;
+    }
+}
+/* ------event.html end---------------------------------- */
+
+/* ---------contact.html----------------------------------- */
+#contact-header p {
+    font-size: 1rem;
+    line-height: 1.75em;
+    font-weight: normal;
+    text-align: center;
+    margin:2% 0 4% 0;
+}
+#contact-body {
+    background-color: #f1f1f1;
+}
+#contact-info {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 3%;
+}
+#contact-left {
+    width: 100%;
+}
+#contact-left img {
+    width: 100%;
+    margin: 5% 15% 0 5%;
+    object-fit: cover;
+    object-position: 50% 50%;
+
+}
+#contact-right {
+    width: 100%;
+    padding-top: 5%;
+    margin-left: 10%;
+}
+#contact-info p, a {
+    font-size: 1rem;
+    line-height: 1.875em;
+    margin-left: 0;
+}
+#info-wrap-mobile {
+    display: none;
+}
+#info-form {
+    padding-top: 1.5em;
+}
+#infoform-inline {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+#info-name{
+    width: 34%;
+    padding-right: 15px;
+}
+#info-email {
+    width: 34%;
+}
+
+#info-subject {
+    width: 68%;
+    padding: 10px 0;
+}
+#info-btn {
+    width: 68%;
+    margin-top: 5%;
+    background-color: #000;
+    color: #fff;
+    border: solid 1px #000;
+    cursor: pointer;
+    padding: 1.5% 0;
+}
+#info-btn:hover {
+    background-color: #000;
+    opacity: 0.5;
+}
+
+
+#info-name input, #info-email input, #info-subject input {
+    width: 100%;
+}
+#info-form input, textarea {
+    border: none;
+    border-bottom: solid 1px #000;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 0.8rem;
+    padding: 10px;
+}
+#info-form input:hover , textarea:hover {
+    border: solid 1px #000;
+    cursor: text;
+}
+#info-form input:focus , textarea:focus {
+    outline: 0;
+}
+textarea {
+    width: 68%;
+    resize: none;
+}
+#info-map {
+    margin:0 5% 5% 5%;
+    padding-bottom: 2%;
+}
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait */
+
+@media only screen
+
+and (min-device-width: 375px)
+
+and (max-device-width: 667px)
+
+and (-webkit-min-device-pixel-ratio: 2)
+
+and (orientation: portrait) {
+    #contact-body {
+        padding-bottom: 15%;
+    }
+    #contact-header {
+        margin-bottom: 15%;
+    }
+    #contact-header h2 {
+        margin-top: 20%;
+        text-align: center;
+        padding: 5% 0;
+    }    
+    #contact-header p {
+        font-size: 15px;
+    }
+    #contact-info {
+        flex-direction: column;
+        margin-left: 0;
+    }
+    #contact-left {
+        width: auto;
+        overflow: hidden;
+    }
+    #contact-left img {
+        object-fit: cover;
+        object-position: 50% 50%;
+        margin: 0;
+    }
+    #contact-right {
+        margin-left: 0;
+        padding: 0 2%;
+    }
+    #info-wrap {
+        display: none;
+    }
+    #info-wrap-mobile {
+        display: block;
+    }
+    #infoform-inline {
+        flex-direction: column;
+    }
+    #info-name, #info-email, #info-subject, #info-message textarea, #info-btn {
+        width: 100%;
+    }
+    #info-name {
+        padding-right: 0;
+    }
+    #info-btn {
+        margin-left: 0;
+    }
+    #info-map {
+        margin-top: 10%;
+    }
+    #info-wrap-mobile p {
+        font-size: 1rem;
+        text-align: center;
+        margin-left: 0;
+    }
+
+}
+@media only screen
+
+and (min-device-width: 668px)
+
+and (max-device-width: 1023px) {
+    #contact-header h2 {
+        margin-top: 10%;
+    }
+    #contact-header p {
+        font-size: 1rem;
+    }
+    #contact-info p, a{
+        font-size: 1rem;
+    }
+    #contact-left img {
+        height: 400px;
+        margin-top: 15%;
+    }
+    #infoform-inline {
+        width: 90%;
+        display: block;
+    }
+    #info-name {
+        padding-right: 0;
+    }
+    #info-name, #info-email  {
+        width: 100%;
+    }
+    #info-subject, textarea {
+        width: 90%;
+    }
+    #info-btn {
+        width: 90%;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+}
+/* ---------contact.html end------------------------------- */
+/* This is footer */
+footer {
+    height: 100px;
+    font-size: 13.5px;
+    margin-bottom: 5%;
+}
+
+.social-icon, #footer-mark {
+    text-align: center;
+}
+
+.social-icon ul {
+    list-style-type: none;
+    padding: 3% 0;
+}
+
+li {
+    display: inline-block;
+    padding: 0 5px;
+}
+#footer-mark {
+    font-size: 0.8rem;
+    line-height: 1.79em;
+}
