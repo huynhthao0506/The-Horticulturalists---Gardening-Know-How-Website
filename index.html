@@ -17,7 +17,7 @@
         <header>
             <nav>
                 <div class="logo">
-                    <a href="index.html"><img src="./img/logo.png" alt="logo"></a>
+                    <a href="index.html"><img src="./img/logo.png" alt="logo" width="32" height="30"></a>
                     <div class="logo-p"><a href="index.html"><p>The Horticulturalists</p></a></div>
                 </div>
                 <!-- <div class="logo-p"><a href="#"><p>The Horticulturalists</p></a></div> -->
@@ -55,8 +55,7 @@
                 <h2>Fill Your Space with Plants</h2>
                 <p>Watch our indoor gardending guide</p>
                 <div class="flex-part">
-                    <div class="row">
-                        <div class="item">
+                         <div class="item">
                             <img src="./img/article01.png" alt="pic1">
                             <h3>Plant Stands & Tables</h3>
                             <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</p>
@@ -72,8 +71,6 @@
                                 <a href="guide.html">Watch Video</a>
                             </button>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="item">
                             <img src="./img/article02.png" alt="pic2">
                             <h3>Herbs Go Mainstream</h3>
@@ -90,7 +87,7 @@
                                 <a href="guide.html">Watch Video</a>
                             </button>
                         </div>
-                    </div>
+                    
                 </div>
             </div>    
         <!-- Article end -->
@@ -283,8 +280,9 @@
         //Form validation
         function noSubmit() {
             let x = document.getElementById("name").value;
+            let y = document.getElementById("email").value;
             let text;
-            if (x == "") {
+            if (x == "" || y== "") {
                 text = "Please fill in all required fields";
             }
             document.getElementById("message-footer").innerHTML = text;

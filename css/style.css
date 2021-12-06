@@ -6,6 +6,7 @@
     line-height: 1.5;
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
+    /* outline: solid 1px red; */
 }
 
 body, html {
@@ -60,9 +61,6 @@ a {
 #myDiv {
     display: none;
 }  
-/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-
-/* Portrait */
 
 @media only screen
 
@@ -102,12 +100,12 @@ nav {
 
 .logo-p p {
     color: #20303c;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
     margin-left: 0;
 }
 
 .logo img {
-    width: 100%;
+    max-width: 100%;
 }
 
 #nav-bar {
@@ -115,7 +113,7 @@ nav {
     align-items: center;
 }
 #nav-bar a {
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 0.5rem;
     text-align: right;
     padding: 0 1rem;
@@ -148,24 +146,26 @@ nav {
 /* -----section header part----------- */
 #header-main {
     margin: 0 5%;
-}
-#header-img1 img {
     position: relative;
+}
+#header-img1 {
     width: 100%;
     filter: brightness(50%);
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 #header-title {
     position: absolute;
-    top: 5%;
-    left: 30%;
-    transform: translate(5%, -30%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 #header-title h1, p {
     color: #f1f1f1;
 }
 #header-title h1 {
     text-align: center;
-    font-size: 5.5rem;
+    font-size: 5rem;
     line-height: 1.25em;
     font-weight: 500;
 }
@@ -220,11 +220,19 @@ nav {
 }
 .flex-part {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: center; 
 }
 .item {
-    margin-bottom: 18%;
-    padding-right: 25px;
+    width: 50%;
+    padding-right: 5%;
+    padding-bottom: 4%;
+
+}
+.item img {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 .item h3 {
     text-align: left;
@@ -239,6 +247,10 @@ nav {
     text-align: left;
     font-size: 0.75rem;
     line-height: 1.875em;
+    letter-spacing: normal;
+}
+.item p, h3 {
+    padding-right: 25px;
 }
 .btn-item {
     background-color: #73bbd1;
@@ -292,7 +304,7 @@ h2 {
     margin-top: 6%;
 }
 .slide-container {
-    height: 800px;
+    height: 150vh;
     position: relative;
 }
 .mySlides {
@@ -303,8 +315,11 @@ h2 {
 }
 
 .mySlides img {
+    max-width: 100%;
     float: left;
     margin-right: 5%;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 .slide-main {
     width: 70%;
@@ -391,6 +406,11 @@ h2 {
     width: 38%;
     margin-left: 20%;  
 }
+#footer-main img {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
 #text h2, p {
     color: #000;
     text-align: left;
@@ -409,10 +429,11 @@ h2 {
 
 /* ----Form part----------- */
 .form-inline {
-    width: 70%;
-    margin: 5% 25%;
+    width: 60%;
+    margin: 5% auto;
     display: flex;
     flex-wrap: nowrap;
+    justify-content: center;
 }
 .form-inline label {
     width: 10%;
@@ -455,18 +476,13 @@ h2 {
    font-size: 0.75rem;
    color: rgba(115,187,209,1);
 }
-/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-/* Portrait */
-
-@media only screen
-
-and (min-device-width: 375px)
-
-and (max-device-width: 667px)
-
-and (-webkit-min-device-pixel-ratio: 2)
-
-and (orientation: portrait) {
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+    #loader {
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%, -60%);
+    }
     nav {
         width: 100%;
         padding: 1.5% 0 1.5% 1%;
@@ -489,17 +505,17 @@ and (orientation: portrait) {
     }
     #nav-bar a {
         padding: 4% 0;
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     #nav-bar a:first-child {
         color: #73bbd1;
     }
     .logo {
-        padding-top: 20px;
+        padding-top: 3%;
     }
     .logo-p p {
         font-size: 1rem;
-        letter-spacing: 0.1rem;
+        letter-spacing: normal;
     }
 
     .hamburger {
@@ -515,24 +531,21 @@ and (orientation: portrait) {
         width: 100%;
         height: 18rem;
         object-fit: cover;
-        object-position: 100% 0%;
+        object-position: 50% 50%;
         filter: brightness(80%);
-    }
-    #header-title {
-        position: absolute;
-        top: 2%;
-        left: 19%;
-        transform: translate(-2%, -19%);
     }
     #header-title h1 {
         text-align: center;
-        font-size: 2rem;
+        font-size: 1.8rem;
         line-height: 1.25em;
         font-weight: 500;
     }
+    #header-title br {
+        display: none;
+    }
     #header-title p {
         text-align: center;
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-weight: lighter;
         line-height: 1.67em;
         letter-spacing: 0.5px;
@@ -540,6 +553,9 @@ and (orientation: portrait) {
         margin-left: 0;
     }
     #btn-primary {
+        left: 50%;
+        bottom: 20%;
+        transform: translate(-50%, -20%);
         padding: 4px 10px;
     }
     #btn-primary a {
@@ -558,17 +574,21 @@ and (orientation: portrait) {
         margin: 15px;
     }
     .flex-part {
-        display: block;
+        padding: 0 6%;
+        display: flex;
+        flex-flow: column;
     }
-    .row {
-        margin: 0;
-        padding: 0;
+    .item {
+        width: 95%;
+        text-align: center;
+        padding-right: 0;
     }
     .item h3, button {
         margin-left: 2%;
     }
     
     .item img {
+        width: 100%;
        object-fit: cover;
        object-position: 50% 50%;
     }
@@ -578,7 +598,7 @@ and (orientation: portrait) {
     }
     .item p {
         width: 100%;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         margin-left: 2%;
         letter-spacing: normal;
     }
@@ -590,16 +610,14 @@ and (orientation: portrait) {
         background-size: cover;
     }
     #quote h2 {
-        width: 100%;
-        font-size: 24px;
-        padding: 50px 0 25px 60px;
+        width: 70%;
+        font-size: 1.2rem;
     }
     #quote p {
-        font-size: 14px;
-        padding-left: 60px;
+        font-size: 1rem;
     }
     .slide-container {
-        height: 700px;
+        height: 50em;
     }
     .slide-main {
         width: 100%;
@@ -614,6 +632,9 @@ and (orientation: portrait) {
     }
     .mySlides img {
         width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        
     }
     .prev, .next {
         display: none;
@@ -631,11 +652,16 @@ and (orientation: portrait) {
     #footer-main {
         padding: 5% 2%;
         display: block;
+        text-align: center;
+    }
+    #footer-main img {
+        width: 100%;
     }
     #text {
         width: 100%;
         margin-left: 0;
     }
+   
     #text h2 {
         font-size: 1.5rem;
         margin-left: 2%;
@@ -646,26 +672,27 @@ and (orientation: portrait) {
         font-size: 0.8rem;
         margin-left: 2%;
     }
-    #footer-main img {
-        width: 100%;
-        object-fit: cover;
-        object-position: 50% 50%;
-    }
     .form-inline {
-        width: 100%;
         display: block;
-        margin: 5% 2%;
+    }
+    .form-inline input {
+        font-size: 0.8rem;
+    }
+    .form-inline label {
+        margin: 0;
     }
     .form-inline label i {
         padding-left: 0;
     }
     .name-part, .email-part {
-        width: 80%;
+        width: 100%;
         padding-top: 20px;
+        margin-left: 0;
     }
     .sub-btn {
         width: 80%;
         margin-top: 25px;
+        font-size: 0.8rem;
     }
     .social-icon {
         margin-top: 10%;
@@ -678,176 +705,226 @@ and (orientation: portrait) {
     }
 
     #footer-mark a {
-        
-        font-size: 12px;
+        font-size: 0.8rem;
     }
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+        nav {
+            padding: 1.5% 2%;
+        }
+        .logo {
+            padding-top: 2%;
+        }
+        .logo-p p {
+            letter-spacing: normal;
+        }
+        #header-main {
+            margin-top: 70px;
+        }
+        #header-img1 img {
+            width: 100%;
+            height: 18rem;
+            object-fit: cover;
+            object-position: 50% 50%;
+            filter: brightness(80%);
+        }
+
+        #header-title h1 {
+            font-size: 2rem;
+        }
+        #header-title p {
+            margin-left: 0;
+            padding: 15px 0;
+            font-size: 1rem;
+        }
+        #btn-primary a {
+            font-size: 0.75rem;
+        }
+        #btn-primary {
+            padding: 8px 10px;
+        }
+        .article {
+            width: 100%;
+            margin: 2% auto;
+        }
+        .article h2 {
+            font-size: 2rem;
+        }
+        .flex-part, .item h3, .item p {
+            text-align: center;
+        }
+        .item {
+            padding: 2% 2%;
+        }
+        .item p {
+            width: 100%;
+            padding-right: 0;
+        }
+        #quote {
+            margin: 0;
+        }
+        #quote h2 {
+            font-size: 2rem;
+        }
+        .slide-container {
+            height: 100vh;
+        }
+        .mySlides {  
+            top: 5%;
+        }
+        .mySlides img {
+            width: 70%;
+        }
+        .slide-main p {
+            font-size: 0.8rem;
+        }
+        .slide-main h3, p {
+            padding: 0;
+        }
+        .prev, .next {
+            top: 15%;
+        }
+        #footer-main {
+            padding: 8% 2%;
+        }
+        #footer-main img {
+            width: 100%;
+        }
+        #text {
+            width: 50%;
+            margin-left: 0;
+        }
+        #text h2 {
+            font-size: 2rem;
+        }
+        #text p {
+            font-size: 0.8rem;
+        }
+        .form-inline {
+            width: auto;
+            margin: 5% 10%;
+        }
+        .form-inline label i {
+            font-size: 0.8rem;
+            padding-left: 0;
+        }
+        .form-inline input {
+            font-size: 0.8rem;
+            width: auto;
+        }
+        .name-part, .email-part {
+            width: auto;
+        }
+        .sub-btn {
+            font-size: 0.8rem;
+        }
+}
     
 
-}
-
-
-@media only screen
-
-and (min-device-width: 668px)
-
-and (max-device-width: 1023px) {
-    nav {
-        padding: 1.5% 2%; 
-    }
-    .logo {
-        padding-top: 2%;
-    }
-    .logo-p p {
-        letter-spacing: normal;
-    }
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
     #header-main {
-        margin: 70px 0 0 0;
+        margin-top: 0 5%;
     }
-    #header-title {
-        position: absolute;
-        top: 3%;
-        left: 35%;
-        transform: translate(-3%, -35%);
+    #header-img1 img {
+        width: 100%;
     }
     #header-title h1 {
-        font-size: 2.5rem;
+        font-size: 2.7rem;
     }
     #header-title p {
-        margin-left: 0;
-        padding: 15px 0;
-        font-size: 1rem;
-    }
-    #btn-primary a {
-        font-size: 0.75rem;
-    }
-    #btn-primary {
-        padding: 8px 10px;
-    }
-    .article {
-        margin: 0 auto;
-        width: 90%;
-    }
-    .article h2 {
-        font-size: 2rem;
-    }
-    .article p {
-        font-size: 1.25rem;
-    }
-    .item img {
-        width: 100%;
-    }
-    .item h3 {
-        font-size: 1.5rem;
-    }
-    .item p {
-        font-size: 0.8rem;
         letter-spacing: normal;
     }
-    .btn-item a {
-        font-size: 0.9rem;
+    .article {
+        margin: 100px auto;
     }
-    #quote {
-        margin: 0;
+    .article p {
+        letter-spacing: normal;
+    }
+    .item p {
+        width: 100%;
     }
     #quote h2 {
-        width: 100%;
         font-size: 2rem;
-        padding-left: 80px;
-        padding-top: 100px;
-    }
-    #quote p {
-        padding-left: 80px;
-    }
-    h2 {
-        font-size: 2rem;
+        padding-top: 5%;
     }
     .slide-container {
-        height: 850px;
+        height: 90vh;
     }
-    .mySlides {
-        top: 10%;
-    }
-    .mySlides img {
-        padding-bottom: 20px;
-        width: 70%;
-    }
-    .prev, .next {
-        display: block;
-        top: 26%;
-    }
-    .slide-main h3 {
-        padding: 20px 0;
-        font-size: 1rem;
+    .slide-main {
+        width: 100%;
     }
     .slide-main p {
-        text-align: center;
-        font-size: 0.8rem;
-        padding: 10px;
-        margin-left: 0;
-    }
-    #text {
-        margin-left: 0;
-        width: 100%;
-    }
-    #text h2 {
-        width: 100%;
-        font-size: 2rem;
-        margin-left: 5%;
-        margin-top: 100px;
-    }
-    #text h2, p {
-        margin-left: 5%;
-    }
-    #text p {
         font-size: 0.8rem;
         padding: 0;
     }
+    .mySlides {
+        top: 10%;
+        margin: 0 15%;
+    }
+    
+    .prev , .next {
+        top: 30%;
+    }
+    #text {
+        margin-left: 10%;
+    }
+    #text p {
+        font-size: 0.8rem;
+    }
     .form-inline {
-        width: 80%;
-        margin: 5% 20%;
+        width: auto;
+    }
+    .form-inline label i {
+        padding-left: 0;
     }
     .form-inline input {
-        font-size: 0.8rem;
-    }
-    .form-inline label {
-        margin: 5px 0 5px 0;
-    }
-    .form-inline label i {
-        font-size: 0.8rem;
-        padding-left: 0;
-    }
-    .sub-btn {
-        font-size: 0.75rem;
+        width: auto;
     }
 }
-@media only screen
-
-and (min-device-width: 1023px)
-
-and (max-device-width: 1680px) {
-    #header-title {
-        top: 3%;
-        left: 28%;
-        transform: translate(3%, -28%);
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1824px) {
+    #header-main {
+        margin-top: 0 5%;
+    }
+    #header-img1 img {
+        width: 100%;
     }
     #header-title h1 {
-        font-size: 65px;
+        text-align: center;
+        font-size: 5rem;
+        line-height: 1.25em;
+        font-weight: 500;
     }
-    #quote h2 {
-        width: 53%;
-        padding-top: 100px;
+    .slide-container {
+        height: 150vh;
     }
-    .slide-main h3 {
-        padding: 30px 0;
+    .mySlides {
+        top: 30%;
+        margin-left: 25%;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
     }
-    .slide-main p{
-        font-size: 15px;
-        padding: 10px 30px;
+    .slide-main {
+        width: 80%;
     }
-    .form-inline label i {
-        padding-left: 0;
+    .item p, h3 {
+        padding-right: 25px;
+    }
+    .slide-main p {
+        font-size: 1rem;
+        padding: 15px;
+    }
+    .prev, .next {
+        top: 50%;
+    }
+    #text {
+        margin-left: 20%;
+    }
+    .form-inline {
+        width: 60%;
     }
 }
+    
 /* -----------index.html end -------------*/
 
 /* ------------about.html----------------- */
@@ -884,34 +961,34 @@ and (max-device-width: 1680px) {
 .info h2 {
     padding: 5% 0;
 }
-.row {
-    margin: 50px 0;
-    padding: 20px 0;
-}
 .flex-info {
     display: flex;
-    flex-wrap: nowrap;
-    margin:0 20%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 20%;
 }
 .box-info {
-    margin-bottom: 18%;
-    padding:0 30px;
+    width: 50%;
+    margin-bottom: 3%;
+    padding:0 20px;
 }
 .box-info img {
-    width: 100%;
+    width: 70%;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 .box-info h4 {
     font-size: 1.4rem;
     font-weight: lighter;
     line-height: 1.41em;
-    margin: 40px 0;
+    margin: 10px 0;
     color: #000;
 }
 .font01 {
     font-size: 1rem;
     font-weight: lighter;
     line-height: 1.75em;
-    padding-bottom: 40px;
+    padding-bottom: 5px;
 }
 .font02, .font03 {
     font-size: 0.75rem;
@@ -920,38 +997,29 @@ and (max-device-width: 1680px) {
 .box-info p {
     margin-left: 0;
 }
-/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-
-/* Portrait */
-
-@media only screen
-
-and (min-device-width: 375px)
-
-and (max-device-width: 667px)
-
-and (-webkit-min-device-pixel-ratio: 2)
-
-and (orientation: portrait) {
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
     .about-title {
         margin-top: 25%;
     }
     .about-title h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-align: center;
     }
     .about-title h3 {
-       width: 100%;
-       font-size: 1rem;
-       text-align: center; 
+       width: 90%;
+       font-size: 0.9rem;
+       text-align: center;
+       padding-right: 0; 
     }
     .about-title p {
         width: 100%;
-        padding: 2% 1%;
-        font-size: 0.6rem;
+        padding: 2%;
+        font-size: 0.7rem;
         text-align: center;
     }
     .info h2 {
+        font: 1.5rem;
         text-align: center;
         padding-top: 10%;
         margin-top: 0;
@@ -959,6 +1027,15 @@ and (orientation: portrait) {
     .flex-info {
         display: block;
         margin: 0;
+    }
+    .box-info {
+        width: 100%;
+    }
+    .box-info h4 {
+        font-size: 1.3rem;
+    }
+    .box-info, .box-info a {
+        font-size: 0.8rem;
     }
     .box-info, .box-info p {
         text-align: center;
@@ -969,38 +1046,51 @@ and (orientation: portrait) {
         object-position: 50% 50%;
     }    
 }
-/* ipad */
-@media only screen
-
-and (min-device-width: 668px)
-
-and (max-device-width: 1023px) {
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
+ {
     .about-title h2 {
         margin-top: 10%;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     .about-title h3 {
+        padding-right: 0;
         width: 60%;
     }
     .about-title p {
         width: 60%;
     }
+    .info h2 {
+        font-size: 2rem;
+    }
     .flex-info {
-        margin: 0;
+        margin: 0 15%;
+    }
+    .box-info {
+        width: 50%;
     }
     .box-info h4 {
         margin: 0;
+        font-size: 1rem;
     }
     .font01 {
         padding-bottom: 0;
+    }
+    .box-info img {
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+    .font01,.font02 a, .font03 a {
+        font-size: 0.8rem;
     }    
 }
-@media only screen
-
-and (min-device-width: 1023px)
- 
-and (max-device-width: 1680px)
-{
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px)
+{   
+    .about-title h2 {
+        margin-top: 10%;
+    }
     .about-title p {
         width: 40%;
     }
@@ -1016,11 +1106,11 @@ and (max-device-width: 1680px)
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
-    font-size: 40px;
+    font-size: 3rem;
     line-height: 1.35em;
 }
 .guide-title h3 {
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: lighter;
     line-height: 1.75em;
     letter-spacing: 1px;
@@ -1031,7 +1121,7 @@ and (max-device-width: 1680px)
     text-align: center;
     margin-left: 0;
     padding: 50px 0;
-    font-size: 15px;
+    font-size: 1rem;
     line-height: 1.875em;
     letter-spacing: normal;
 }
@@ -1065,23 +1155,13 @@ and (max-device-width: 1680px)
 }
 .video-title {
     color: #fff;
-    font-size: 30px;
+    
     font-weight: lighter;
     padding-bottom: 40px;
 }
-/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-
-/* Portrait */
-
-@media only screen
-
-and (min-device-width: 375px)
-
-and (max-device-width: 667px)
-
-and (-webkit-min-device-pixel-ratio: 2)
-
-and (orientation: portrait) {
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+ {
     .guide-title {
         margin-left: 2%;
         text-align: left;
@@ -1112,20 +1192,18 @@ and (orientation: portrait) {
 
     }
     .video-title {
-        font-size: 1rem;
+        font-size: 0.8rem;
         text-decoration: underline;
+        padding-right: 0;
     }
     .play-btn i {
-        font-size: 30px;
+        font-size: 25px;
     }
    
 }
-/* ipad */
-@media only screen
-
-and (min-device-width: 668px)
-
-and (max-device-width: 1023px) {
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
+ {
     .guide-title h2 {
         margin-top: 20%;
     }
@@ -1136,18 +1214,28 @@ and (max-device-width: 1023px) {
         font-size: 1.5rem;
     }    
 }
-@media only screen
-
-and (min-device-width: 1023px)
- 
-and (max-device-width: 1680px) {
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px)
+ {
     .video-title {
-        font-size: 30px;
+        font-size: 1.75rem;
+        padding-right: 0;
     }
     .play-btn i {
-        font-size: 50px;
+        font-size: 2.5rem;
     }
 }
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+    .video-title {
+        font-size: 2.5rem;
+        padding-right: 0;
+    }
+    .play-btn i {
+        font-size: 2.5rem;
+    }
+}
+    
 /* ---------guide.html end------------------------- */
 
 /* ------event.html---------------------------------- */
@@ -1208,13 +1296,16 @@ and (max-device-width: 1680px) {
     opacity: 0.5;
 }
 .grid-container {
-    margin-left: 6%;
+    margin: 0 auto;
+    justify-content: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 10%;
+    grid-template-columns: repeat(3,1fr);
+    padding: 0 10%;
     grid-column-gap: 5%;
 }
-
+.grid-item {
+    justify-self: center;
+}
 .grid-container h3 {
     font-size: 1.5rem;
     line-height: 1.41em;
@@ -1223,7 +1314,7 @@ and (max-device-width: 1680px) {
     padding-bottom: 25%;
 }
 .grid-container img {
-    width: 80%;
+    width: 100%;
     object-fit: cover;
     object-position: 50% 50%;
 }
@@ -1340,19 +1431,9 @@ and (max-device-width: 1680px) {
     background-color: #73bbd1;
     opacity: 1;
 }
-/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-
-/* Portrait */
-
-@media only screen
-
-and (min-device-width: 375px)
-
-and (max-device-width: 667px)
-
-and (-webkit-min-device-pixel-ratio: 2)
-
-and (orientation: portrait) {
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+ {
     #event-header {
         margin: 45% 0;
     }
@@ -1360,23 +1441,34 @@ and (orientation: portrait) {
         text-align: center;
         font-size: 2rem;
         margin-top: 30%;
-        padding: 0 20%;
+        padding: 0 10%;
     }
     .event-wrap h3 {
+        width: 100%;
         font-size: 1.5rem;
         padding-top: 20%;
+        padding-right: 0;
     }
     .event-wrap p {
         font-size: 0.8rem;
-        width: 80%;
+        width: 90%;
     }
     #wrap-button {
         bottom: 10%;
         font-size: 0.7rem;
     }
+    .btn {
+        padding: 5px 7px;
+    }
    .grid-container {
        margin: 0 auto;
        display: block;
+   }
+   .grid-container h3 {
+       padding-right: 0;
+   }
+   .grid-item {
+       text-align: center;
    }
    .grid-container img {
        width: 100%;
@@ -1386,23 +1478,25 @@ and (orientation: portrait) {
        height: auto;
    }
    #event-bottom h3 {
+       padding-right: 0;
        font-size: 2rem;
    }
    #event-bottom p {
        font-size: 1rem;
    }
    #myBtnContainer {
+       text-align: center;
        float: none;
         margin-right: 2px;
         padding: 3px;
    }
+   #font007 br {
+        display: none;
+   }
 }
-/* ipad */
-@media only screen
-
-and (min-device-width: 668px)
-
-and (max-device-width: 1023px) {
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
+ {
     #event-header h2 {
         margin-top: 15%;
         font-size: 2rem;
@@ -1411,26 +1505,30 @@ and (max-device-width: 1023px) {
         height: 380px;
         font-size: 1.5rem;
     }
+    .event-wrap h3 {
+        padding-right: 0;
+    }
     .event-wrap p {
         width: 70%;
     }
     #wrap-button {
-        bottom: 10%;
+        left: 50%;
+        bottom: 8%;
+        transform: translate(-50%,-8%);
         font-size: 0.75rem;
     }
     .grid-container {
-        display: flex;
-        flex-wrap: wrap;
+        grid-template-columns: repeat(2, 1fr);
         margin-left: 0;
     }
     .grid-item {
         text-align: center;
-       flex: 40%;
     }
     .grid-container h3 {
         font-size: 20px;
         padding-bottom: 10%;
     }
+    
     .grid-container p {
         margin-top: 5%;
         text-align: center;
@@ -1443,22 +1541,18 @@ and (max-device-width: 1023px) {
         font-size: 12px;
         margin: 10% 0;
     }
-    /* #font007 {
-        padding-bottom: 18%;
-    } */
     #event-bottom {
         height: 200px;
     }
     #event-bottom h3 {
+        padding-right: 0;
         padding-top: 6%;
         font-size: 2rem;
     }
 }
-@media only screen
-
-and (min-device-width: 1023px)
- 
-and (max-device-width: 1680px) {
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px)
+ {
     .event-wrap h3 {
         width: 60%;
     }
@@ -1470,10 +1564,31 @@ and (max-device-width: 1680px) {
         padding: 10%;
         grid-column-gap: 5%;
     }
+    .grid-container h3 {
+        font-size: 1rem;
+        padding-right: 0;
+    }
+    .grid-container p {
+        font-size: 0.8rem;
+    }
     #event-bottom {
         height: 200px;
     }
 }
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+    .grid-container h3 {
+        font-size: 1.5rem;
+        line-height: 1.41em;
+        font-weight: normal;
+        color: #000;
+        padding-bottom: 25%;
+    }
+    .grid-container p {
+        font-size: 1rem;
+    }
+}
+    
 /* ------event.html end---------------------------------- */
 
 /* ---------contact.html----------------------------------- */
@@ -1577,19 +1692,9 @@ textarea {
     margin:0 5% 5% 5%;
     padding-bottom: 2%;
 }
-/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-
-/* Portrait */
-
-@media only screen
-
-and (min-device-width: 375px)
-
-and (max-device-width: 667px)
-
-and (-webkit-min-device-pixel-ratio: 2)
-
-and (orientation: portrait) {
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+ {
     #contact-body {
         padding-bottom: 15%;
     }
@@ -1607,6 +1712,9 @@ and (orientation: portrait) {
     #contact-info {
         flex-direction: column;
         margin-left: 0;
+    }
+    #info-wrap-mobile a {
+        font-size: 0.8rem;
     }
     #contact-left {
         width: auto;
@@ -1637,23 +1745,22 @@ and (orientation: portrait) {
         padding-right: 0;
     }
     #info-btn {
+        font-size: 0.8rem;
         margin-left: 0;
     }
     #info-map {
         margin-top: 10%;
     }
     #info-wrap-mobile p {
-        font-size: 1rem;
+        font-size: 0.8rem;
         text-align: center;
         margin-left: 0;
     }
 
 }
-@media only screen
-
-and (min-device-width: 668px)
-
-and (max-device-width: 1023px) {
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
+ {
     #contact-header h2 {
         margin-top: 10%;
     }
@@ -1689,8 +1796,8 @@ and (max-device-width: 1023px) {
 /* ---------contact.html end------------------------------- */
 /* This is footer */
 footer {
-    height: 100px;
-    font-size: 13.5px;
+    height: 10vh;
+    font-size: 1rem;
     margin-bottom: 5%;
 }
 
